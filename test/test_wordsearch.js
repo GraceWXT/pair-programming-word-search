@@ -35,4 +35,25 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("horizontal test should return true", () => {
+    const result = wordSearch([
+      ["T","E","S","T"],
+      ["G","R","A","C"],
+      ["C","A","L","V"],
+      ["L","T","G","H"]
+    ], "TEST");
+    assert.isTrue(result);
+  });
+
+  it("vertical test should return true", () => {
+    const result = wordSearch([
+      ["T","V","S","T"],
+      ["G","E","A","C"],
+      ["C","R","L","V"],
+      ["L","T","G","H"]
+    ], "VERT")
+    
+    assert.isTrue(result);
+  });
 });
